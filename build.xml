@@ -1,0 +1,36 @@
+
+<project name="ToDoList" default="run" basedir=".">
+    <description>
+        A simple ToDoList program built using Apache Ant.
+    </description>
+
+    <!-- Define properties -->
+    <property name="src.dir" value="src" />
+    <property name="build.dir" value="build" />
+    <property name="main.class" value="Main" />
+
+    <!-- Define targets -->
+    <target name="init">
+        <!-- Create build directory if it doesn't exist -->
+        <mkdir dir="${build.dir}" />
+    </target>
+
+    <target name="compile" depends="init">
+        <!-- Compile Java source files -->
+        <javac srcdir="${src.dir}" destdir="${build.dir}" />
+    </target>
+
+    <target name="run" depends="compile">
+        <!-- Run the Java program -->
+        <java classname="${main.class}">
+            <classpath>
+                <pathelement location="${build.dir}" />
+            </classpath>
+        </java>
+    </target>
+
+    <target name="clean">
+        <!-- Clean the build directory -->
+        <delete dir="${build.dir}" />
+    </target>
+</project>
