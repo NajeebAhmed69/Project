@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.List;
-
+// this is task class which specify that the any task you want to perform 
  class Task {
     private String description;
     private boolean completed;
