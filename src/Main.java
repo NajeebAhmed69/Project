@@ -51,7 +51,7 @@ class ToDoList {
         }
     }
 }
-// This is MAin Class
+// This is Main Class
 public class Main {
     public static void main(String[] args) {
         ToDoList toDoList = new ToDoList();
