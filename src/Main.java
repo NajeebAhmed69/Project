@@ -29,6 +29,7 @@ class ToDoList {
     public ToDoList() {
         tasks = new ArrayList<>();
     }
+ // This is Add task method
     public void addTask(String description) {
         tasks.add(new Task(description));
     }
@@ -41,7 +42,7 @@ class ToDoList {
             System.out.println("Invalid task index.");
         }
     }
-
+// This is display method
     public void displayTasks() {
         System.out.println("To-Do List:");
         for (int i = 0; i < tasks.size(); i++) {
@@ -50,7 +51,7 @@ class ToDoList {
         }
     }
 }
-
+// This is MAin Class
 public class Main {
     public static void main(String[] args) {
         ToDoList toDoList = new ToDoList();
@@ -85,5 +86,4 @@ public class Main {
         }
     }
 }
-
 
