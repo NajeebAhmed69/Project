@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.List;
-// this is task class which specify that the any task you want to perform 
+// this is task class whoich task we want to do...
  class Task {
     private String description;
     private boolean completed;
@@ -23,7 +23,7 @@ import java.util.List;
         completed = true;
     }
 }
-
+// This is Second class...
 class ToDoList {
     private List<Task> tasks;
     public ToDoList() {
