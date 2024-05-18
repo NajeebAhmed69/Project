@@ -81,7 +81,7 @@ public class Main {
                     System.out.println("Exiting program.");
                     System.exit(0);
                 default:
-                    System.out.println("Invalid choice. Please try again.");
+                    System.out.println("Invalid choice.\n Please try again.");
             }
         }
     }
