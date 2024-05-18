@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.List;
-// this is task class whoich task we want to do...
+// this is task class which task we want to do...
  class Task {
     private String description;
     private boolean completed;
