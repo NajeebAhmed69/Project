@@ -58,8 +58,8 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
-            System.out.println("\n1. Add Task\n2. Mark Task as Completed\n3. Display Tasks\n4. Exit");
-            System.out.print("Enter your choice: ");
+            System.out.println("\n1. Add Task \n2. Mark Task as Completed \n3. Display Tasks \n4. Exit");
+            System.out.print("Enter Your Choice: ");
             int choice = scanner.nextInt();
             scanner.nextLine(); // Consume newline character
 
@@ -81,7 +81,7 @@ public class Main {
                     System.out.println("Exiting program.");
                     System.exit(0);
                 default:
-                    System.out.println("Invalid choice.\n Please try again.");
+                    System.out.println("Invalid choice. Please try again.");
             }
         }
     }
