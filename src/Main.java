@@ -1,4 +1,57 @@
+import java.util.Scanner;
 
+import java.util.ArrayList;
+import java.util.List;
+
+// this is Task class 
+ class Task {
+    private String description;
+    private boolean completed;
+
+    public Task(String description) {
+        this.description = description;
+        this.completed = false;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public boolean isCompleted() {
+        return completed;
+    }
+
+    public void markAsCompleted() {
+        completed = true;
+    }
+}
+// this is todolist class 
+class ToDoList {
+    private List<Task> tasks;
+    public ToDoList() {
+        tasks = new ArrayList<>();
+    }
+    public void addTask(String description) {
+        tasks.add(new Task(description));
+    }
+
+    public void markTaskAsCompleted(int index) {
+        if (index >= 0 && index < tasks.size()) {
+            Task task = tasks.get(index);
+            task.markAsCompleted();
+        } else {
+            System.out.println("Invalid task index.");
+        }
+    }
+
+    public void displayTasks() {
+        System.out.println("To-Do List:");
+        for (int i = 0; i < tasks.size(); i++) {
+            Task task = tasks.get(i);
+            System.out.println((i + 1) + ". " + task.getDescription() + " - " + (task.isCompleted() ? "Completed" : "Not Completed"));
+        }
+    }
+}
 // This is Main Class....
 public class Main {
     public static void main(String[] args) {
@@ -29,7 +82,7 @@ public class Main {
                     System.out.println("Exiting program."); // To exit the program
                     System.exit(0); 
                 default:
-                    System.out.println("Invalid choice. Please try again."); // if invalid key is pressed. 
+                    System.out.println("Invalid choice. Please try again."); // if invalid  
             }
         }
     }
